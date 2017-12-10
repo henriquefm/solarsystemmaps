@@ -1,0 +1,22 @@
+<mat-card id="sizedetails-card" div *ngIf="planet$ | async as planet ">
+  <mat-card-content>
+    <!-- {{planet | json}} -->
+    <div id="earth-image-outer" [style.top.px]="earthImageOuterTop">
+      <img id="earth-image" [src]="earthImageSrc" [alt]="earthName" [style.height.px]="earthImageSize">
+    </div>
+
+    <div id="planet-image-outer" [style.top.px]="getPlanetImageOuterTop(planet)" *ngIf="planet.name != earth.name">
+      <img id="planet-image" [src]="getPlanetImageSrc(planet.name)" alt="{{planet.name}}" [style.height.px]="getPlanetImageSize(planet)">
+    </div>
+
+
+    <!-- <div *ngIf="planet" >
+      <div id="earth-image-outer" [style.top.px]="_earthImageOuterTop">
+        <img id="earth-image" [src]="_earthImageSrc" alt="{{_earth.name}}" [style.height.px]="_earthImageSize">
+      </div>
+      <div id="planet-image-outer" [style.top.px]="_planetImageOuterTop" *ngIf="planet.name != _earth.name">
+        <img id="planet-image" [src]="_planetImageSrc" alt="{{planet.name}}" [style.height.px]="_planetImageSize">
+      </div>
+    </div> -->
+  </mat-card-content>
+</mat-card>
