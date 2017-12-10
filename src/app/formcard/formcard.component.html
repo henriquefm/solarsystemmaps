@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-content>
+
+    <form [formGroup]="planetModelForm" (ngSubmit)="onSubmit()">
+      <p><span i18n="@@iwant">I want</span>
+        <mat-form-field>
+        <mat-select formControlName="planet">
+          <mat-option *ngFor="let planet of solarSystem.planets" [value]="planet">
+            {{ planet.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </p>
+
+
+      <p><span> to be the size of a</span>
+      <mat-form-field>
+        <mat-select formControlName="stuff">
+          <mat-option *ngFor="let stuff of stuffs" [value]="stuff">
+            {{ stuff.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </p>
+
+      <button mat-raised-button color="primary">GO</button>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,76 @@
+
+#map {
+    /* height:100vh; */
+    /* height:calc(100vh - 64px - 5px - 170px - 30px); */
+    height:calc(100vh - 64px );
+    width: 100%;
+}
+
+#left-cards{
+    position: absolute;
+    top: 120px; //50px;
+    left: 10px;
+    
+    width: 350px;
+    z-index: 1;
+
+    ssm-formcard, ssm-planetdetailscard{
+        display: block;
+        margin-bottom: 10px;
+    } 
+    
+}  
+
+#left-cards.mdLeftCards{
+    /deep/ md-row{
+        min-height: 30px;
+    }
+    /deep/ md-card{
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    /deep/ p{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+#left-cards.smLeftCards{
+    /deep/ md-row{
+        min-height: 24px;
+    }
+    /deep/ md-card{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /deep/ p{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+}
+    
+#bottom-cards{
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    
+    max-height: 170px;
+    height: 170px;
+    
+    width: calc(100vw - 20px);
+    
+    ssm-sizeimages {
+      max-height: 170px;
+      height: 170px;
+      
+        bottom:0;
+        left:0;
+      
+    }
+  }
+
+  #bottom-cards.xsBottomCards {
+    left: 370px;
+    width: calc(100vw - 380px);
+  }
+  
