@@ -8,7 +8,7 @@ import { validateSuffixes } from '@angular/flex-layout';
 
 import { StoreModule } from '@ngrx/store';
 
-import { MatToolbarModule, MatSidenavModule, MatIconModule, MatCardModule, MatSelectModule, MatButtonModule, MatTableModule } from '@angular/material';
+import { MatToolbarModule, MatSidenavModule, MatIconModule, MatCardModule, MatSelectModule, MatButtonModule, MatTableModule, MatDialog, MatDialogModule, MatTabsModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MathService } from './shared/math.service';
@@ -23,6 +23,7 @@ import { FormcardComponent } from './formcard/formcard.component';
 import { PlanetdetailscardComponent } from './planetdetailscard/planetdetailscard.component';
 import { LengthPipe } from './shared/length.pipe';
 import { SizeimagesComponent } from './sizeimages/sizeimages.component';
+import { HelpdialogComponent } from './helpdialog/helpdialog.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SizeimagesComponent } from './sizeimages/sizeimages.component';
     FormcardComponent,
     PlanetdetailscardComponent,
     LengthPipe,
-    SizeimagesComponent
+    SizeimagesComponent,
+    HelpdialogComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -39,11 +41,16 @@ import { SizeimagesComponent } from './sizeimages/sizeimages.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     StoreModule.forRoot(reducers),
-    MatToolbarModule, MatSidenavModule, MatIconModule, MatCardModule, MatSelectModule, MatButtonModule, MatTableModule
+    MatToolbarModule, MatSidenavModule, MatIconModule, MatCardModule, MatSelectModule, MatButtonModule, MatTableModule, MatDialogModule,
+    MatTabsModule
   ],
   providers: [
+    MatDialog,
     MathService, CatalogService, AssetService,
     customBreakpointProvider
+  ],
+  entryComponents: [
+    HelpdialogComponent
   ],
   bootstrap: [AppComponent]
 })
