@@ -7,11 +7,11 @@ import { validateSuffixes } from '@angular/flex-layout';
  */
 export function updateBreakpoints(it: BreakPoint) {
     switch (it.alias) {
-        case 'xs': it.mediaQuery = '(max-height: 639px)'; break;
-        case 'sm': it.mediaQuery = '(min-height: 640px) and (max-height: 699px)'; break;
-        case 'md': it.mediaQuery = '(min-height: 700px) and (max-height: 799px)'; break;
-        case 'lg': it.mediaQuery = '(min-height: 800px)'; break;
-        case 'xl': it.mediaQuery = '(min-height: 800px)'; break;
+        case 'xs': it.mediaQuery = '(max-height: 659px)'; break;
+        case 'sm': it.mediaQuery = '(min-height: 660px) and (max-height: 724px)'; break;
+        case 'md': it.mediaQuery = '(min-height: 725px) and (max-height: 824px)'; break;
+        case 'lg': it.mediaQuery = '(min-height: 825px)'; break;
+        case 'xl': it.mediaQuery = '(min-height: 825px)'; break;
     }
     return it;
 }

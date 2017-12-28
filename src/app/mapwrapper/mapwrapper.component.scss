@@ -22,10 +22,10 @@
 }  
 
 #left-cards.mdLeftCards{
-    /deep/ md-row{
+    /deep/ mat-row{
         min-height: 30px;
     }
-    /deep/ md-card{
+    /deep/ mat-card{
         padding-top: 16px;
         padding-bottom: 16px;
     }
@@ -36,10 +36,10 @@
 }
 
 #left-cards.smLeftCards{
-    /deep/ md-row{
+    /deep/ mat-row{
         min-height: 24px;
     }
-    /deep/ md-card{
+    /deep/ mat-card{
         padding-top: 10px;
         padding-bottom: 10px;
     }
