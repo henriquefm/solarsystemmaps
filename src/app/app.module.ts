@@ -8,7 +8,7 @@ import { validateSuffixes } from '@angular/flex-layout';
 
 import { StoreModule } from '@ngrx/store';
 
-import { MatToolbarModule, MatSidenavModule, MatIconModule, MatCardModule, MatSelectModule, MatButtonModule, MatTableModule } from '@angular/material';
+import { MatToolbarModule, MatSidenavModule, MatIconModule, MatCardModule, MatSelectModule, MatButtonModule, MatTableModule,  MatExpansionModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MathService } from './shared/math.service';
@@ -39,7 +39,7 @@ import { SizeimagesComponent } from './sizeimages/sizeimages.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     StoreModule.forRoot(reducers),
-    MatToolbarModule, MatSidenavModule, MatIconModule, MatCardModule, MatSelectModule, MatButtonModule, MatTableModule
+    MatToolbarModule, MatSidenavModule, MatIconModule, MatCardModule, MatSelectModule, MatButtonModule, MatTableModule, MatExpansionModule
   ],
   providers: [
     MathService, CatalogService, AssetService,

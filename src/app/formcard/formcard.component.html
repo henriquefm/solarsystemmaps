@@ -1,19 +1,28 @@
-<mat-card>
-  <mat-card-content>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Settings
+    </mat-panel-title>
+    <mat-panel-description *ngIf="selectedPlanetModel$ | async; let selectedPlanetModel">
+      {{ selectedPlanetModel.selectedPlanet.name }} the size of a {{ selectedPlanetModel.selectedStuff.name | lowercase }}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
 
-    <form [formGroup]="planetModelForm" (ngSubmit)="onSubmit()">
-      <p><span i18n="@@iwant">I want</span>
-        <mat-form-field>
+  <form [formGroup]="planetModelForm" (ngSubmit)="onSubmit()">
+    <p>
+      <span i18n="@@iwant">I want</span>
+      <mat-form-field>
         <mat-select formControlName="planet">
           <mat-option *ngFor="let planet of solarSystem.planets" [value]="planet">
             {{ planet.name }}
           </mat-option>
         </mat-select>
       </mat-form-field>
-      </p>
+    </p>
 
 
-      <p><span> to be the size of a</span>
+    <p>
+      <span> to be the size of a</span>
       <mat-form-field>
         <mat-select formControlName="stuff">
           <mat-option *ngFor="let stuff of stuffs" [value]="stuff">
@@ -21,9 +30,9 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
-      </p>
+    </p>
 
-      <button mat-raised-button color="primary">GO</button>
-    </form>
-  </mat-card-content>
-</mat-card>
+    <button mat-raised-button color="primary">GO</button>
+  </form>
+
+</mat-expansion-panel>

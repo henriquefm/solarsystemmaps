@@ -1,4 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/filter';
 
 
@@ -38,14 +40,16 @@ export class MapwrapperComponent implements OnInit {
       
       this.initMap();
       
-      google.maps.event.addListenerOnce(this.map, 'idle', () => {
-        
+      let mapReadyPromise = new Promise((resolve, reject) => {
+        google.maps.event.addListenerOnce(this.map, 'idle', resolve);
+      });
+
+      mapReadyPromise.then(() => {
         this.catalog.store.dispatch({ type: MODEL_SELECTED, payload: {
           selectedPlanet: this.catalog.getEarth(),
           selectedStuff: this.catalog.getDefaultStuff()
         } });
-
-      });
+      })
 
     });
 

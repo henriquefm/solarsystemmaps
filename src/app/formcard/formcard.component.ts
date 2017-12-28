@@ -1,4 +1,8 @@
-import { MODEL_SELECTED } from './../shared/ngrx/reducer';
+import { MODEL_SELECTED, PlanetModelState } from './../shared/ngrx/reducer';
+
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/first';
+
 import { Stuff } from './../shared/models/stuff.model';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -20,6 +24,8 @@ export class FormcardComponent implements OnInit {
   solarSystem: SolarSystem;
   stuffs: Stuff[];
 
+  selectedPlanetModel$: Observable<PlanetModelState>;
+
   constructor(private fb: FormBuilder,
     private catalog: CatalogService) {
 
@@ -31,13 +37,20 @@ export class FormcardComponent implements OnInit {
     this.solarSystem = this.catalog.getSolarSystem();
     this.stuffs = this.catalog.getStuffs();
 
+    this.selectedPlanetModel$ = this.catalog.planetModelStore;
+
   }
 
   ngOnInit() {
-    this.planetModelForm.patchValue({
-      'planet': this.catalog.getEarth(),
-      'stuff': this.catalog.getDefaultStuff()
-    })
+    this.catalog.planetModelStore
+      .filter(newState => newState !== undefined )
+      .first()
+      .subscribe((planetModel) => {
+        this.planetModelForm.patchValue({
+          'planet': planetModel.selectedPlanet,
+          'stuff': planetModel.selectedStuff
+        })
+      });
   }
 
   onSubmit() {
