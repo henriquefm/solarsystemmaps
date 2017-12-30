@@ -1,7 +1,8 @@
 
 <mat-toolbar color="primary">
-    <!-- <mat-icon>menu</mat-icon> -->
     {{title}}
+    <span class="spacer"></span>
+    <mat-icon class="help-icon" (click)="openHelp()">help</mat-icon>
 </mat-toolbar>
 
 <ssm-mapwrapper></ssm-mapwrapper>
