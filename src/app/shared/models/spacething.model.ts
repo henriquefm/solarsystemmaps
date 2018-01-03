@@ -1,4 +1,5 @@
 
+/** It can be a planet or the Sun */
 export class SpaceThing {
 
     //Model

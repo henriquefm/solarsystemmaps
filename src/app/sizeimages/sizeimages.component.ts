@@ -9,6 +9,9 @@ import { CatalogService } from './../shared/catalog.service';
 const DEFAULT_EARTH_SIZE = 120;
 const DEFAULT_BLOCK_SIZE = 170;
 
+/**
+ * A MatCard that show images of Earth and the focused planet, with their sizes in scale
+ */
 @Component({
   selector: 'ssm-sizeimages',
   templateUrl: './sizeimages.component.html',

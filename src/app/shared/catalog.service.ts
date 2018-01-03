@@ -9,6 +9,9 @@ import { Stuff } from './models/stuff.model';
 import { SolarSystem } from './models/solarsystem.model';
 import { SpaceThing } from './models/spacething.model';
 
+/**
+ * This service knows a lot about planets, stuff and cities
+ */
 @Injectable()
 export class CatalogService {
 
@@ -77,7 +80,7 @@ export class CatalogService {
             { lat: 34.052, lng: -118.256 }, //LA
             { lat: 48.8582756, lng: 2.2945214 }, //Paris
             { lat: 51.5007304, lng: -0.1246028 }, //London
-            { lat: -33.8567955, lng: 151.2155381 }, //Sydney,
+            { lat: -33.8567955, lng: 151.2155381 }, //Sydney
             ];
 
   getRandomCity(): google.maps.LatLng {

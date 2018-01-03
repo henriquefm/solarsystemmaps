@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * The MatDialog with general and tech info
+ */
 @Component({
   selector: 'app-helpdialog',
   templateUrl: './helpdialog.component.html',

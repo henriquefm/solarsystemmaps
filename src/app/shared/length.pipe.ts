@@ -1,12 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
-//import { NumberFormatStyle } from '@angular/common/src/facade/intl';
 
+
+/**
+ * Transform an integer (in meters) into a more human friendly string, like '149.6 million km'
+ */
 @Pipe({
   name: 'length'
 })
-//export class LengthPipe implements PipeTransform {
-  export class LengthPipe extends DecimalPipe {
+export class LengthPipe extends DecimalPipe {
 
   transform(value: any, digits?: any): any {
     

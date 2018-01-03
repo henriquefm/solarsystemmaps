@@ -7,6 +7,9 @@ import { SpaceThing } from './models/spacething.model';
 
 import { } from 'googlemaps';
 
+/**
+ * This service is good with math
+ */
 @Injectable()
 export class MathService {
 

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+/** It serves assets */
 @Injectable()
 export class AssetService {
 

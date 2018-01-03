@@ -9,6 +9,9 @@ import 'rxjs/add/observable/of';
 import { SpaceThing } from './../shared/models/spacething.model';
 import { CatalogService } from './../shared/catalog.service';
 
+/**
+ * A MatCard that show information about the real and model sizes of the planet and its orbit
+ */
 @Component({
   selector: 'ssm-planetdetailscard',
   templateUrl: './planetdetailscard.component.html',

@@ -13,4 +13,4 @@ Stuff that I used:
 * [Angular CLI](https://cli.angular.io/)
 * [@ngrx/store](https://github.com/ngrx/store)
 
-Lots of improvement can be done, with internationalization, better layout, among other stuff.
+Lots of improvement can be done, with internationalization, better layout, mobile version, among other stuff.

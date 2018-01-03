@@ -12,6 +12,9 @@ import { SolarSystem } from './../shared/models/solarsystem.model';
 
 import { CatalogService } from './../shared/catalog.service';
 
+/**
+ *  Shows the form that changes the planet model seetings. It has a mat-expansion-panel inside it.
+ */
 @Component({
   selector: 'ssm-formcard',
   templateUrl: './formcard.component.html',

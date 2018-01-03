@@ -14,7 +14,9 @@ import { MathService } from './../shared/math.service';
 
 import { } from 'googlemaps';
 
-
+/**
+ * The main component. It draws the map with all the orbits, and listens to changes to the planet model and clicks on the map.
+ */
 @Component({
   selector: 'ssm-mapwrapper',
   templateUrl: './mapwrapper.component.html',
