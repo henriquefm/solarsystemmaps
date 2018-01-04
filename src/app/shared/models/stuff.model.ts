@@ -1,5 +1,5 @@
 
-/** Stuff like a basket ball or a tennis ball */
+/** Stuff like a basketball or a tennis ball */
 export class Stuff {
 
 

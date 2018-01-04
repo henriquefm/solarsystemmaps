@@ -87,7 +87,7 @@ export class MapwrapperComponent implements OnInit {
         this.recenter(geolocationCenter);
       });
     }
-
+    
 
   }
 

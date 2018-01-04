@@ -24,6 +24,7 @@ import { PlanetdetailscardComponent } from './planetdetailscard/planetdetailscar
 import { LengthPipe } from './shared/length.pipe';
 import { SizeimagesComponent } from './sizeimages/sizeimages.component';
 import { HelpdialogComponent } from './helpdialog/helpdialog.component';
+import { InitialdialogComponent } from './initialdialog/initialdialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HelpdialogComponent } from './helpdialog/helpdialog.component';
     PlanetdetailscardComponent,
     LengthPipe,
     SizeimagesComponent,
-    HelpdialogComponent
+    HelpdialogComponent,
+    InitialdialogComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -50,7 +52,7 @@ import { HelpdialogComponent } from './helpdialog/helpdialog.component';
     customBreakpointProvider
   ],
   entryComponents: [
-    HelpdialogComponent
+    HelpdialogComponent, InitialdialogComponent
   ],
   bootstrap: [AppComponent]
 })

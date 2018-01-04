@@ -1,8 +1,8 @@
 # Solar System Maps
 
-This project tries to give an idea of the scale of the Solar System by showing how big it would be, in Google Maps, if the Earth were the size of a basketball or other objects. It was inspired by this video - https://www.youtube.com/watch?v=pR5VJo5ifdE - by Mark Rober.
+This project tries to give an idea of the scale of the Solar System by showing how big it would be, in Google Maps, if Earth were the size of a basketball or other objects. It was inspired by this video - https://www.youtube.com/watch?v=pR5VJo5ifdE - by Mark Rober.
 
-Live demo: [solarsystemmaps.appspot.com](http://solarsystemmaps.appspot.com)
+Live demo: [solarsystemmaps.appspot.com](https://solarsystemmaps.appspot.com)
 
 My main goal was to learn Angular 2, and the bulk of its development was during Angular 2's beta phase.
 
