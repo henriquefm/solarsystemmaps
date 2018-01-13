@@ -2,3 +2,8 @@
 mat-header-row {
     display: none;
 }
+
+mat-panel-title {
+    font-weight: bold;
+    font-size: 1.25em;
+}
